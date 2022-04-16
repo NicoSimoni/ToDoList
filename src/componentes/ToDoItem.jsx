@@ -13,15 +13,15 @@ export function ToDoItem({ todo, cambiarEstado, editarTarea}){
   };
 
   return (
-    <div class="container">
+    <div class="container" style={{textAlign: "center"}}> 
       <div class="row">
         <div class="col-sm">        
-          <input class="form-check-input" type="checkbox" style={{position: 'absolute', left: '50px'}} checked={completed} onChange={checkboxClick} />
+          <input class="form-check-input" type="checkbox" checked={completed} onChange={checkboxClick} />
         </div>
-        <div class="col-sm" style={{position: 'absolute', left: '100px'}}>
+        <div class="col-sm">
           {task}    
         </div>
-        <div class="col-sm" style={{position: 'relative', right: '50px'}}>
+        <div class="col-sm">
           <button class="btn btn-outline-light" onClick={editTask}>Editar</button>
         </div>
       </div>

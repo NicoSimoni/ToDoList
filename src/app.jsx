@@ -121,13 +121,13 @@ export function App() {
 
             <br/> <ToDoList todos={todos} cambiarEstado={cambiarEstado} editarTarea={editarTarea}/>
             
-            <div class="justify-content-center">
+            <div class="justify-content-center" style={{textAlign: "center"}}>
                 <input ref={todoTaskRef} type="text" placeholder="Nueva tarea" />
                 <button class="btn btn-outline-success" onClick={añadirTarea}>Añadir</button>
                 <button class="btn btn-outline-danger"  onClick={eliminarTareasCompletadas}>Eliminar completadas</button>
+                <br/>Quedan {todos.filter((todo) => !todo.completed).length} tareas por terminar
             </div>
             
-            <br/>Quedan {todos.filter((todo) => !todo.completed).length} tareas por terminar
         </Fragment>
     );
 }
